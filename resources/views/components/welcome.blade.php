@@ -35,9 +35,9 @@
                     <td class="align-middle">{{$rs->email}}</td>
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic exemple">
-                            <a href="" type="button" class="btn btn-secondary">delete</a>
+                            <a href="" type="button" class="btn btn-secondary">info</a>
                             <a href=""type="button" class="btn btn-warning">edit</a>
-                            <BUtton class="btn btn-danger">det</BUtton>
+                            <BUtton class="btn btn-danger">delete</BUtton>
                         </div>
                     </td>
                 </tr>
