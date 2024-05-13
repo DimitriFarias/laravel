@@ -42,17 +42,23 @@ class AlunoController extends Controller
 
 
 
-    public function edit()
+    public function edit(Request $request, string $id)
     {
-      return view('aluno.edit');
+
+        $aluno = Aluno::findOrFail($id);
+        return view('aluno.edit', ['id' => $id,
+        'nome' => $aluno->nome, 'email' => $aluno->email
+    ]);
     }
 
 
 
 
-    public function update()
+    public function update(Request $request, string $id)
     {
-      dd("apagar");
+        $aluno = Aluno::findOrFail($id);
+        $aluno->update($request->all());
+        return redirect()->route('aluno.index');
     }
 
 

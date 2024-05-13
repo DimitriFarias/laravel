@@ -25,7 +25,7 @@ Route::get('/index.aluno',[AlunoController::class, 'index'])->name('aluno.index'
 Route::get('/create.aluno',[AlunoController::class, 'create'])->name('aluno.create');
 Route::post('/store.aluno',[AlunoController::class, 'store'])->name('aluno.store');
 Route::get('/show.aluno',[AlunoController::class, 'show'])->name('aluno.show');
-Route::get('/edit.aluno',[AlunoController::class, 'edit'])->name('aluno.edit');
+Route::get('/edit.aluno/{id}',[AlunoController::class, 'edit'])->name('aluno.edit');
 Route::put('/update.aluno',[AlunoController::class, 'update'])->name('aluno.update');
 Route::delete('/destroy.aluno',[AlunoController::class, 'destroy'])->name('aluno.destroy');
 
