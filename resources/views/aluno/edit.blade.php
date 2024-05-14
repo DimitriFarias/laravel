@@ -3,7 +3,6 @@
 //  function edit(string $id)
 //  {
 
-
 //      return view('aluno.edit');
 //  }
 //  $aluno = Aluno::findOrFail($id);
@@ -48,7 +47,7 @@
                   </div>
 
 
-<form class="row g-3  needs-validation"  action="{{route('aluno.update')}}"  method="POST" >
+<form class="row g-3  needs-validation"  action="{{route('aluno.update', $aluno->id)}}"  method="POST" >
     @csrf
     @method('put')
       <div class="col-12">
@@ -69,7 +68,7 @@
 
 <div >
  <!-- <a href="aluno.index">  -->
-  <button class="btn btn-primary " type="submit" name="acao">update</button>
+  <button class="btn btn-warning " type="submit" name="acao">update</button>
    <!-- </a>  -->
 </div>
 

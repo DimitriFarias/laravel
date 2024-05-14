@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class AlunoController extends Controller
 {
+
     public function index()
     {
 
@@ -42,12 +43,12 @@ class AlunoController extends Controller
 
 
 
-    public function edit(Request $request, string $id)
+    public function edit( string $id)
     {
 
         $aluno = Aluno::findOrFail($id);
         return view('aluno.edit', ['id' => $id,
-        'nome' => $aluno->nome, 'email' => $aluno->email
+        'nome' => $aluno->nome, 'email' => $aluno->email, 'aluno' => $aluno
     ]);
     }
 
@@ -64,8 +65,12 @@ class AlunoController extends Controller
 
 
 
-    public function destroy()
+    public function destroy(string $id)
     {
-        dd("editar");
+        $aluno = Aluno::findOrFail($id);
+
+        $aluno->delete();
+
+        return redirect()->route('aluno.index');
     }
 }
