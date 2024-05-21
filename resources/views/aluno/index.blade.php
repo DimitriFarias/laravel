@@ -24,6 +24,9 @@
             </div>
         </div>
     </div>
+
+
+
     <!-- fzer o aluno cadastrado com sucesso -->
 
 </x-app-layout>
