@@ -10,7 +10,7 @@ class AlunoController extends Controller
 
     public function index()
     {
-
+        $aluno = Aluno::orderBy('created_at', 'DESC')->get();
     //   return view('aluno.index');
     return view('aluno.index');
     }
@@ -31,7 +31,7 @@ class AlunoController extends Controller
     {
       Aluno::create($request->all());
       //  return view('aluno.index');
-      return redirect()->route('aluno.index')->with('success', 'aluno add');
+      return redirect()->route('aluno.index');
     }
 
 

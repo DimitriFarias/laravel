@@ -20,10 +20,10 @@
                         {{ __('Alunos') }}
                     </x-nav-link>
                     <!-- definir rotas -->
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-nav-link href="{{ route('funcionario.index') }}" :active="request()->routeIs('dashboard')">
                         {{ __('funcionarios') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-nav-link href="{{ route('produto.index') }}" :active="request()->routeIs('dashboard')">
                         {{ __('produtos') }}
                     </x-nav-link>
                 </div>
