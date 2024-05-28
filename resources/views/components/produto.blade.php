@@ -2,14 +2,22 @@
      <x-application-logo class="block h-12 w-auto" />
      <link rel="stylesheet" href="../../../style.css">
      <div class="d-flex align-items-center justify-contant-between">
+
+
      <h1 class="col-11 text-2xl font-medium text-gray-900 ">LISTA DE PRODUTO</h1>
-     <a href="{{Route('produto.create')}}" class="btn btn-primary">produto</a>
+
+     <a href="{{Route('produto.create')}}" class="btn btn-primary">+produto</a>
      </div>
+     <form action="{{route('produto.index')}}" method="get">
+        <input type="text"  name="search" class="col-6" placeholder="pesquisar...">
+        <Button  class="btn btn-success" >kkkk</Button>
+     </form>
   <hr>
  <?php
+// parei tentaando fazer aprecer so um produto Curso Laravel - Busca no Laravel - #21
+
   use App\Models\produto;
  $produto = produto::orderBy('created_at', 'DESC')->get();
-
  ?>
 
 
@@ -33,19 +41,21 @@
                 <tr>
                     <td class="align-middle">{{$loop->iteration}}</td>
                     <td class="align-middle">{{$rs->nome}}</td>
-                    <td class="align-middle">{{$rs->preco}}</td>
+                    <td class="align-middle">R${{$rs->preco}}</td>
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic exemple">
                             <!-- <a href="" type="button" class="btn btn-secondary">info</a> -->
-                            <div>
+                            <div class="m-1">
                                 <a href="{{Route('produto.edit', $rs->id )}}"type="button" class="btn btn-warning">editar</a>
                             </div>
+
 
                             <form action="{{Route('produto.destroy', $rs->id)}}" method="post" onsubmit="return confirm('deletar?')">
                             @csrf
                             @method('delete')
-                                <Button class="btn btn-danger" >delete</Button>
+                                <Button class="btn btn-danger m-1" >delete</Button>
                             </form>
+
                         </div>
                     </td>
                 </tr>

@@ -6,7 +6,7 @@
      <a href="{{Route('funcionario.create')}}" class="btn btn-primary">funcionario</a>
      </div>
   <hr>
- 
+
   <?php
  use App\Models\funcionario;
  $funcionario = funcionario::orderBy('created_at', 'DESC')->get();
@@ -35,18 +35,18 @@
                     <td class="align-middle">{{$loop->iteration}}</td>
                     <td class="align-middle">{{$rs->nome}}</td>
                     <td class="align-middle">{{$rs->email}}</td>
-                    <td class="align-middle">{{$rs->salario}}</td>
+                    <td class="align-middle"> R$ {{$rs->salario}}</td>
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic exemple">
                             <!-- <a href="" type="button" class="btn btn-secondary">info</a> -->
-                            <div>
+                            <div class="m-1">
                                 <a href="{{Route('funcionario.edit', $rs->id )}}"type="button" class="btn btn-warning">editar</a>
                             </div>
 
                             <form action="{{Route('funcionario.destroy', $rs->id)}}" method="post" onsubmit="return confirm('deletar?')">
                             @csrf
                             @method('delete')
-                                <Button class="btn btn-danger" >delete</Button>
+                                <Button class="btn btn-danger m-1" >delete</Button>
                             </form>
                         </div>
                     </td>

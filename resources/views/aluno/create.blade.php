@@ -48,7 +48,7 @@
       </div>
       <div class="col-12">
   <label for="yourPassword" class="form-label" >email</label>
-  <input type="text" name="email" class="form-control"placeholder="email" required>
+  <input type="email" name="email" class="form-control"placeholder="email" required>
  <!-- <div class="invalid-feedback">Please enter your password!</div>-->
 </div>
 <br>

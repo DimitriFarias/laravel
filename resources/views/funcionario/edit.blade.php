@@ -59,7 +59,7 @@
       </div>
       <div class="col-12">
   <label for="yourPassword" class="form-label" >email</label>
-  <input type="text" name="email" class="form-control"placeholder="email"  value="{{$email}}" required>
+  <input type="email" name="email" class="form-control"placeholder="email"  value="{{$email}}" required>
  <!-- <div class="invalid-feedback">Please enter your password!</div>-->
 </div>
 <div class="col-12">

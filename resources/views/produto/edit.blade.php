@@ -49,7 +49,7 @@
       </div>
       <div class="col-12">
   <label for="yourPassword" class="form-label" >preço</label>
-  <input type="decimal" name="preco" class="form-control"placeholder="email"  value="{{$preco}}" required>
+  <input type="decimal"  type="number" name="preco" class="form-control"placeholder="email"  value="{{$preco}}" required>
  <!-- <div class="invalid-feedback">Please enter your password!</div>-->
 </div>
 <br>

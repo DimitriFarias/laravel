@@ -42,14 +42,14 @@
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic exemple">
                             <!-- <a href="" type="button" class="btn btn-secondary">info</a> -->
-                            <div>
+                            <div class="m-1">
                                 <a href="{{Route('aluno.edit', $rs->id )}}"type="button" class="btn btn-warning">editar</a>
                             </div>
 
                             <form action="{{Route('aluno.destroy', $rs->id)}}" method="post" onsubmit="return confirm('deletar?')">
                             @csrf
                             @method('delete')
-                                <Button class="btn btn-danger" >delete</Button>
+                                <Button class="btn btn-danger m-1" >delete</Button>
                             </form>
                         </div>
                     </td>

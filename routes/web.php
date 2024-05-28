@@ -19,6 +19,12 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// melhorar desing (edit)
+// mostra  q n tem produto (validar com o banco)
+// proibir o acesso traves das rotas q estao aqui em baixo
+// tirar o nome do jet das tabela ;/
+// mudar nome do botao de criar
+
 
 // ALUNO
 Route::get('/alunos',[AlunoController::class, 'index'])->name('aluno.index');

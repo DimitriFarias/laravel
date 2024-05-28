@@ -11,7 +11,18 @@ class produtoController extends Controller
      */
     public function index()
     {
+        // $search = request('search');
+        // if ($search) {
+        // $rs = produto::where([
+        //     ['nome','like','%'.$search.'%']
+        // ])->get();
+
+        // }else {
+        //     $rs=produto::all();
+        // }
         return view('produto.index');
+
+        // return view('produto.index', ['produto'=> $rs,'search'=> $search]);
     }
 
     /**
@@ -27,9 +38,10 @@ class produtoController extends Controller
      */
     public function store(Request $request)
     {
-        produto::create($request->all());
-      
+     produto::create($request->all());
+
       return redirect()->route('produto.index');
+
     }
 
     /**
